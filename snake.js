@@ -148,21 +148,28 @@ function mobileView(x) {
     } 
 }
 function dup(){
+    if(d!="DOWN"){
     up.play();
     d="UP";
+    }
 }
 function ddown(){
+    if (d!="UP"){
     down.play();
     d="DOWN";
+    }
 }
 function dleft(){
+    if(d!="RIGHT"){
     left.play();
     d="LEFT";
+    }
 }
 function dright(){
+    if(d!=LEFT){
     right.play;
     d="RIGHT";
-}
+    }
 
 var x = window.matchMedia("(max-width: 768px)");
 mobileView(x);
