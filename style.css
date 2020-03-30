@@ -2,6 +2,7 @@ body{
     align-items: center;
     text-align: center;
     margin-top: 5vh;
+    background-color:#AAD751;
 }
 
 button{
@@ -21,7 +22,16 @@ button:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 2px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
-.button{
-    text-align: center;
+button:focus{
+    border: none;
+    outline: none;
+}
+.buttons{
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.controls{
+    display: none;
 }
