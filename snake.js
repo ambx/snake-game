@@ -128,3 +128,8 @@ function  draw(){
     ctx.fillText(score, 2*box, 1.6*box);
 }
 var game = setInterval(draw, 100);
+
+function reload(){
+    window.location.reload();
+}
+window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score.\n* Score a perfect 20 to enter the party :)" );
