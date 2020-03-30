@@ -118,6 +118,9 @@ function  draw(){
     if(snakeX < box || snakeX > 17*box || snakeY < 3*box || snakeY> 17*box || collision(newHead,snake)){
         dead.play();
         clearInterval(game);
+        window.addEventListener("keydown",refresh);
+        if(score==20)
+        window.open("two.html");
     }
 
     snake.unshift(newHead);
@@ -132,4 +135,37 @@ var game = setInterval(draw, 100);
 function reload(){
     window.location.reload();
 }
-window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score." );
+
+function refresh(e){
+    if(e.keyCode==13)
+    window.location.reload();
+}
+
+window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score.\n* Score a perfect 20 to enter the party :)" );
+
+//mobile view
+function mobileView(x) {
+    if (x.matches) { 
+     document.getElementById("controls").style.display="block";
+    } 
+}
+function dup(){
+    up.play();
+    d="UP";
+}
+function ddown(){
+    down.play();
+    d="DOWN";
+}
+function dleft(){
+    left.play();
+    d="LEFT";
+}
+function dright(){
+    right.play;
+    d="RIGHT";
+}
+
+var x = window.matchMedia("(max-width: 768px)");
+mobileView(x);
+x.addListener(mobileView);
