@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="one.css">
 </head>
 <canvas id="snake" width="608" height="608"></canvas>
 <br><br>
+<div class="buttons">
+<div class="restart">
     <button type="button" onclick="reload()">Restart</button>
+</div>
+<div class="controls" id="controls">
+    <table>
+        <tr>
+            <td></td>
+            <td><button type="button" id="up" onclick="dup()">🡅</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="left" onclick="dleft()">🡄</button></td>
+            <td><button type="button" id="down" onclick="ddown()">🡇</button></td>
+            <td><button type="button" id="right" onclick="dright()">🡆</button></td>
+        </tr>
+    </table>
+</div>
+</div>
 <script src="snake.js"></script>
 </html>
