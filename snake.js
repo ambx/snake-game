@@ -119,8 +119,6 @@ function  draw(){
         dead.play();
         clearInterval(game);
         window.addEventListener("keydown",refresh);
-        if(score==20)
-        window.open("two.html");
     }
 
     snake.unshift(newHead);
@@ -141,7 +139,7 @@ function refresh(e){
     window.location.reload();
 }
 
-window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score.\n* Score a perfect 20 to enter the party :)" );
+window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score." );
 
 //mobile view
 function mobileView(x) {
