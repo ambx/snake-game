@@ -1,3 +1,10 @@
+//fastclick
+if ('addEventListener' in document) {
+	document.addEventListener('DOMContentLoaded', function() {
+		FastClick.attach(document.body);
+	}, false);
+}
+
 const cvs= document.getElementById("snake");
 const ctx= cvs.getContext("2d");
 
@@ -119,6 +126,8 @@ function  draw(){
         dead.play();
         clearInterval(game);
         window.addEventListener("keydown",refresh);
+        if(score==20)
+        window.open("two.html");
     }
 
     snake.unshift(newHead);
@@ -139,37 +148,44 @@ function refresh(e){
     window.location.reload();
 }
 
-window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score." );
+window.alert("How to Play:\n* Use arrow keys to move the snake. \n* Every fruit eaten is a +1 score.\n* Score a perfect 20 to enter the party :)" );
 
 //mobile view
 function mobileView(x) {
     if (x.matches) { 
      document.getElementById("controls").style.display="block";
+     document.getElementById("controls").style.marginLeft="6vw";
+     document.body.style.zoom="0%";
     } 
 }
 function dup(){
+    FastClick.attach(document.body);
     if(d!="DOWN"){
     up.play();
     d="UP";
     }
 }
 function ddown(){
+    FastClick.attach(document.body);
     if (d!="UP"){
     down.play();
     d="DOWN";
     }
 }
 function dleft(){
+    FastClick.attach(document.body);
     if(d!="RIGHT"){
     left.play();
     d="LEFT";
     }
 }
 function dright(){
-    if(d!=LEFT){
-    right.play;
+    FastClick.attach(document.body);
+    if(d!="LEFT"){
+    right.play();
     d="RIGHT";
     }
+}
 
 var x = window.matchMedia("(max-width: 768px)");
 mobileView(x);
