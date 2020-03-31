@@ -3,6 +3,7 @@ body{
     text-align: center;
     margin-top: 5vh;
     background-color:#AAD751;
+    font-family: 'Open Sans', sans-serif;
 }
 
 button{
@@ -34,4 +35,17 @@ button:focus{
 }
 .controls{
     display: none;
+}
+.footer p {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2vh;
+    opacity: 50%;
+  }
+a{
+    text-decoration: none;
+    color: rgb(65, 42, 121);
 }
